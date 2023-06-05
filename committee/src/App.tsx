@@ -116,11 +116,11 @@ const trendingPosts = [
   // More posts...
 ];
 
-function classNames(...classes) {
+function classNames(...classes: any) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function Example() {
+export default function App() {
   return (
     <>
       {/*
@@ -408,7 +408,7 @@ export default function Example() {
                   <select
                     id="question-tabs"
                     className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-rose-500"
-                    defaultValue={tabs.find((tab) => tab.current).name}
+                    defaultValue={tabs.find((tab) => tab?.current)?.name}
                   >
                     {tabs.map((tab) => (
                       <option key={tab.name}>{tab.name}</option>
